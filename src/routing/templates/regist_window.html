@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div style="margin-top: 50px;" class="ui container">
+
+	<h1 class="ui center aligned header green">{{ app_name }}</h1>
+
+	<!-- {% if in_or_out == False %}
+	<form class="ui form" action="{{ url_for('reg') }}" method="post">
+		<h3 class="test_css">Здравствуйте</h3>
+		<div class="field">
+			<label>Зарегестрируйтесь</label>
+			<input type="text" name="title" placeholder="Введите логин данные"><br>
+		</div>
+		<button class="ui teal basic button" type="submit">Зарегистрироваться</button>
+	</form>
+	{% else %} -->
+	<form class="ui form" action="{{ url_for('regist') }}" method="post">
+		<h3 class="test_css">Здравствуйте!</h3>
+		<div class="field">
+			<label>Регистрация</label>
+			<input type="text" name="username" placeholder="Введите логин"><br>
+		</div>
+		<div class="field">
+			<input type="text" name="password" placeholder="Введите пароль"><br>
+		</div>
+		<button class="ui teal basic button" type="submit">Войти</button>
+	</form>
+
+	<form class="ui form" action="{{ url_for('auth_window') }}" method="get">
+		<button class="ui teal basic button" type="submit">К авторизации!</button>
+	</form>
+	<!-- {% endif %} -->
+
+
+	</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div style="margin-top: 50px;" class="ui container">
+
+	<form class="ui form" action="{{ url_for('trans') }}" method="post">
+		<h3 class="test_css">Здравствуйте, {{ usermane }} !</h3>
+        <div class="field">
+			<label>Ваш счет</label>
+			<!-- <input type="text" name="username" placeholder="Введите логин"><br> -->
+		</div>
+		<div class="field">
+			<label> Хотите перевести деньги? </label>
+			<input type="text" name="username_to" placeholder="Введите логин, кому хотите перевести"><br>
+		</div>
+		<div class="field">
+			<input type="text" name="many_money" placeholder="Введите сумму"><br>
+		</div>
+		<button class="ui teal basic button" type="submit"> Перевести! </button>
+	</form>
+
+	<form class="ui form" action="{{ url_for('trans_list') }}" method="get">
+		<button class="ui teal basic button" type="submit"> Посмотреть историю переводов? </button>
+	</form>
+	<!-- {% endif %} -->
+
+
+	</div>
+</div>
+{% endblock content %}
